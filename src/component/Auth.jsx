@@ -1,11 +1,10 @@
-
+import "../css/auth/authStyle.css"
 
 const Auth = ()=>{
 
     return <>
     
-        <div>
-
+        <div className="auth">
             <p>ورود/ثبت نام</p>
         </div>
     </>

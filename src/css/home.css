@@ -1,11 +1,22 @@
 
+@font-face {
+    font-family: vazir;
+    src: url("https://drive.google.com/file/d/1INCLT9OxVaXCrgM2nnHjlvTNsZRz1lWV/view?usp=sharing");
+    /* font-weight: 00; */
+    font-weight: 30px;
+}
+
 nav{
-    background-color: bisque;
+    /* background-color: bisque; */
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding-left: 2%;
     padding-right: 2%;
+    border-bottom: solid ;
+    border-color: rgb(186, 186, 186);
+    border-radius: 10px;
+    
 }
 
 
@@ -21,7 +32,7 @@ nav{
     display: inline;
     width: 6%;
     height: 100%;
-   margin-right: 34%;
+   margin-right: 59%
 }
 
 .input-container{
@@ -52,4 +63,17 @@ nav{
     box-shadow: 0px 0px 5px gray;
 }
 
+
+.links-container{
+    margin-right: 3%;
+}
+
+.link{
+
+    font-family: "vazir";
+    text-decoration: none;
+    font-size: 19px;
+    color: rgb(87, 87, 87);
+    font-weight: 500;
+}
 
