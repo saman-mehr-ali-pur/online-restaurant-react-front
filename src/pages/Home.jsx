@@ -32,7 +32,7 @@ const Home = ()=>{
           <div className="links-container"><a className="link" href="#!">خانه</a></div>
           <div className="links-container"><a className="link" href="#!">ارتباط با ما</a></div>
           <div className="links-container"><a className="link" href="#!">درباره ما</a></div>
-       <Auth className="auth"/>
+       <Auth user={{username:"سامان"}} className="auth"/>
     </nav>
     
 
