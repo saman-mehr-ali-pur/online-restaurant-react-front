@@ -1,4 +1,4 @@
-import logo from "../assets/logo.webp"
+import logo from "../assets/images.svg"
 import Auth from "../component/Auth"
 import "../css/home.css" 
 
@@ -12,6 +12,8 @@ import foodimg from "../assets/food.jpg"
 import drinkimg from "../assets/drink.jpg"
 import dessertimg from "../assets/dessert.jpg"
 import saladimg from "../assets/salad.jpg"
+import food2 from "../assets/food2.jpg"
+import delivryimg from "../assets/delivry.svg"
 import "../css/silde/sildeStyle.css"
 const Home = ()=>{
 
@@ -25,10 +27,7 @@ const Home = ()=>{
         <img className="logo" src={logo} alt="logo" />
         </div>
        
-       
-        {/* <div className="input-container">
-            <input className="search-box" type="text" name="search" placeholder="search..."></input>
-        </div> */}
+          <div className="links-container"><a className="link" href="#!">تاریخچه سفارشات</a></div>
           <div className="links-container"><a className="link" href="#!">منو</a></div>
           <div className="links-container"><a className="link" href="#!">خانه</a></div>
           <div className="links-container"><a className="link" href="#!">ارتباط با ما</a></div>
@@ -67,7 +66,34 @@ const Home = ()=>{
       </SwiperSlide>
     </Swiper>
     </div>
+
+
+    <div className="des-container">
+        <div className="text-container"><p>ارائه بهترین خدمت سفارش آنلاین و با بهترین مواد اولیه</p></div>
+        <div className="pic-container"><img src={food2} alt="" /></div>
+    </div>
     
+
+    <div className="des-container">
+        
+        <div className="pic-container-d"><img src={delivryimg} alt="" /></div>
+        <div className="text-container"><p>تحویل در سریع ترین زمان ممکن</p></div>
+    </div>
+    {/* <div className="footer-container">
+
+          <footer>
+            <p className="address">قم خیابان ....</p>
+            <p className="phone number">تلفن:32855555</p>
+          </footer>
+        
+    </div> */}
+
+
+<div class="container">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
     </>
 }
 

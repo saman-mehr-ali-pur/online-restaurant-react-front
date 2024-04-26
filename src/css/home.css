@@ -6,6 +6,16 @@
     font-weight: 30px;
 }
 
+@font-face {
+    font-family: samim;
+    
+
+    src: url("fonts/Samim.woff");
+}
+
+body{
+    background-color: rgb(245, 245, 245);
+}
 nav{
     /* background-color: bisque; */
     display: flex;
@@ -20,19 +30,21 @@ nav{
 }
 
 
-.logo{
-    height: 100%;
-    width: 100%;
-    border-radius:50%;
-    
-}
+
 
 .logo-container{
 
     display: inline;
     width: 6%;
     height: 100%;
-   margin-right: 59%
+   margin-right: 40%
+}
+
+.logo{
+    height: 100%;
+    width: 100%;
+    border-radius:50%;
+    
 }
 
 .input-container{
@@ -77,3 +89,113 @@ nav{
     font-weight: 500;
 }
 
+
+.des-container{
+   display: flex;
+    margin-top: 5%;
+   justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 20%;
+    box-shadow: 0 0 6px rgb(171, 171, 171);
+    border-radius: 20px;
+}
+
+.pic-container{
+    /* margin-top: 10%; */
+   width: 50%;
+   height: 90%;
+   
+}
+
+.pic-container img{
+    height: 600px;
+    width: 100%;
+   object-fit: cover;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+}
+
+
+.text-container{
+    width: 50%;
+    margin-right: 2%;
+}
+
+.text-container p{
+    /* position: absolute; */
+   font-family: "samim";
+   text-align: right;
+   font-size: 35px;
+   font-weight: bold;
+    line-height: 4;
+}
+
+
+.footer-container{
+    border-radius: 5px;
+    background-color: rgb(250, 225, 0);}
+
+.footer-container footer{
+    padding-left: 70%;
+    text-align: right;
+}
+
+.pic-container-d{
+   border-radius: 50px;
+    background-color: azure;
+   /* background-blend-mode: multiply; */
+   mix-blend-mode: multiply;
+
+   object-fit: cover;
+
+   
+}
+
+
+
+
+
+body {
+    /* background-color: #2e3537; */
+    margin: 0;
+  }
+  
+  .container {
+    position: relative;
+    height: 500px;
+  }
+  
+  .wave {
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    width: 100%;
+    background: url('../assets/wave.png') repeat-x;
+    background-size: 250rem 30rem;
+    animation: animate 15s linear infinite;
+  }
+  
+  @keyframes  animate {
+    0% {
+      background-position-x: 0;
+      background-position-x: -250rem;
+    }
+  }
+  
+  .wave:nth-child(1) {
+    opacity: 0.9;
+  }
+  
+  .wave:nth-child(2) {
+    opacity: 0.5;
+    animation-delay: 1s;
+    animation-direction: reverse;
+  }
+  
+  .wave:nth-child(3) {
+    opacity: 0.7;
+    animation-delay: 5s;
+  }
