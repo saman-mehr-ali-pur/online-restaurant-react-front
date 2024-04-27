@@ -11,6 +11,9 @@ const Menu = () => {
     }
     return <>
     <Navbar/>
+    <div className="search-c">
+        <input type="text"  placeholder="جستجو غذا یا نوشیدنی..."/>
+    </div>
     <div id="ctn" className="container" >
         <div className="right-side">
             {data.map((item,index) => {return <div key={index} className="item-c">
@@ -19,9 +22,10 @@ const Menu = () => {
             </div>})}
         </div>
         <div className="left-side">
-            <div className="item"><p>foods</p></div>
-            <div className="item"><p>drinks</p></div>
-            <div className="item"><p>desserts</p></div>
+            <div className="item"><p>غذا ها</p></div>
+            <div className="item"><p>نوشیدنی ها</p></div>
+            <div className="item"><p>دسر ها</p></div>
+            <div className="item"><p>سالاد ها</p></div>
         </div>
     </div>
     
