@@ -15,25 +15,14 @@ import saladimg from "../assets/salad.jpg"
 import food2 from "../assets/food2.jpg"
 import delivryimg from "../assets/delivry.svg"
 import "../css/silde/sildeStyle.css"
+import Navbar  from "../component/NavBar";
 const Home = ()=>{
 
 
 
     return <>
     
-    <nav>
-        
-      <div className="logo-container">
-        <img className="logo" src={logo} alt="logo" />
-        </div>
-       
-          <div className="links-container"><a className="link" href="#!">تاریخچه سفارشات</a></div>
-          <div className="links-container"><a className="link" href="#!">منو</a></div>
-          <div className="links-container"><a className="link" href="#!">خانه</a></div>
-          <div className="links-container"><a className="link" href="#!">ارتباط با ما</a></div>
-          <div className="links-container"><a className="link" href="#!">درباره ما</a></div>
-       <Auth user={{username:"سامان"}} className="auth"/>
-    </nav>
+    <Navbar/>
     
 
     <div className="silde-container"><Swiper
@@ -79,16 +68,9 @@ const Home = ()=>{
         <div className="pic-container-d"><img src={delivryimg} alt="" /></div>
         <div className="text-container"><p>تحویل در سریع ترین زمان ممکن</p></div>
     </div>
-    {/* <div className="footer-container">
+    
 
-          <footer>
-            <p className="address">قم خیابان ....</p>
-            <p className="phone number">تلفن:32855555</p>
-          </footer>
-        
-    </div> */}
-
-
+    
 <div class="container">
         <div class="wave"></div>
         <div class="wave"></div>
@@ -96,6 +78,9 @@ const Home = ()=>{
     </div>
     </>
 }
+
+
+
 
 
 export default Home;
