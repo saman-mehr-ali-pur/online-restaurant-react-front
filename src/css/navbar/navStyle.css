@@ -19,7 +19,7 @@ nav{
     align-items: center;
     justify-content: flex-start;
     padding-left: 2%;
-    padding-right: 2%;
+    padding-right: 1%;
     border-bottom: solid ;
     border-color: rgb(186, 186, 186);
     border-radius: 10px;
@@ -35,7 +35,7 @@ nav{
     display: inline;
     width: 6%;
     height: 100%;
-   margin-right: 49%
+   margin-right: 48%
 }
 
 .logo{

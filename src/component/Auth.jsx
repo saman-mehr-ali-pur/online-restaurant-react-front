@@ -4,7 +4,7 @@ const Auth = (props)=>{
 
 
    
-    console.log(props.user.username);
+    // console.log(props.user.username);
     if(props.user==null)
         return <>
         
