@@ -1,6 +1,7 @@
 import "../css/login/loginStyle.css"
 import { useState ,useRef,useEffect} from "react";
 
+
 const Login = ()=>{
 
     const [isSent,setIsSent]  = useState(false);
@@ -12,11 +13,7 @@ const Login = ()=>{
         console.log("run function")
     }
     
-    useEffect(()=>{
-        setIsSent(!isSent);
-        console.log("use effect")
-
-    },[])
+    
     const sendForm = (e)=>{
         e.preventDefault();
         btn.current.disabled = true;
@@ -46,6 +43,10 @@ const Login = ()=>{
             <input type="password" id="password" name="password" ref={passInput}/>
             <div className="checkbox-c"><input type="checkbox" onClick={toggleVisibility}/><p>نشان دادن پسورد</p></div>
             <button type="submit" className="submit-btn" ref={btn}>ورود</button>
+
+
+
+
         </form>
         </div>
     </>
