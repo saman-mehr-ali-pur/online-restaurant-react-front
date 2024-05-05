@@ -1,0 +1,48 @@
+@font-face {
+    font-family: iransans;
+    src: url("../fonts/Samim.woff");
+}
+
+
+div{
+    font-family: "iransans";
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+  }
+  
+  th, td {
+    text-align: center;
+    padding: 1.5%;
+    
+  }
+  
+  tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+
+  .conclusion{
+
+    display: flex;
+    flex-direction: column;
+    /* border: solid; */
+    width: 30%;
+    margin-left: 25%;
+    justify-content: center;
+    align-content: center;
+    /* text-align: center; */
+    margin-top: 2%;
+    /* border-color: rgb(195, 195, 195); */
+
+  }
+
+  .conclusion p{
+    border-bottom: solid;
+    border-width: 1px;
+    padding-bottom: 1%;
+    border-color: gray;
+  }

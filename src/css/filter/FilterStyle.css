@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "samim";
+    src: url("../fonts/IRANSansWeb_Bold.ttf");
+}
+
+.container{
+    overflow-y:auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    align-items: center;
+    border: solid;
+    height: 35%;
+    width: 95%;
+    margin-left: 2.5%;
+    font-family: "samim";
+    font-weight: 500;
+    border-color: rgba(212, 212, 212, 0.6);
+
+}
+
+.container div{
+    height: 90%;
+    /* border: solid; */
+    margin-top: 0.5%;
+    margin-bottom: 1%;
+}
+
+input{
+    width: 100%;
+}
+select{
+    width: 100%;
+    text-align: center;
+}
+
+ button{
+    width: 100%;
+} 
