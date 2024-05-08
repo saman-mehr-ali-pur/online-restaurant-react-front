@@ -1,0 +1,62 @@
+@font-face {
+    font-family: samim;
+    src: url("../fonts/Samim.woff");
+}
+
+.item{
+
+    display: flex;
+    border: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    border-color: rgb(190, 190, 190);
+    width: 97%;
+    margin-top: 1%;
+    font-family: "samim";
+    font-weight: 500;
+    
+}
+
+.description{
+    /* border: solid; */
+    /* margin: 1.5%; */
+    /* height: 100%; */
+    width: 80%;
+    /* border: solid; */
+}
+
+.description p{
+    padding-left: 1%;
+    padding-right: 1%;
+    direction: ltr;
+    text-align: right;
+}
+
+
+
+img{
+    /* flex-grow: 1; */
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 20%;
+    
+}
+
+
+.trash-icn{
+    /* border: solid; */
+    width: 4%;
+    opacity: 0.2;
+    align-self: flex-start;
+    margin: 1%;
+    transition: opacity 0.1s;
+}
+.trash-icn:hover{
+    opacity: 0.8;
+}
+
+.trash-icn img{
+    width: 100%;
+}
+
+

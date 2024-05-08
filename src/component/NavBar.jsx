@@ -7,6 +7,7 @@ const Navbar =()=>{
       <div className="logo-container">
         <img className="logo" src={logo} alt="logo" />
         </div>
+          <div className="links-container"><a className="link" href="#!">سبد خرید</a></div>
           <div className="links-container"><a className="link" href="#!">تاریخچه سفارشات</a></div>
           <div className="links-container"><a className="link" href="#!">منو</a></div>
           <div className="links-container"><a className="link" href="#!">خانه</a></div>

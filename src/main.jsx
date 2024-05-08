@@ -9,6 +9,9 @@ import Login from './pages/login.jsx'
 import SignUp from './pages/SignUP.jsx'
 import Order from "./pages/Order.jsx"
 import OrderHistory from './pages/OrderHistory.jsx'
+import Shope from './pages/shope.jsx'
+
+import FoodDetail from './pages/FoodDetail.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* <Home/> */}
@@ -17,6 +20,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <Login/> */}
     {/* <SignUp/> */}
     {/* <OrderHistory/> */}
-    <Order/>
+    {/* <Order/> */}
+    {/* <Shope/> */}
+
+    {<FoodDetail/>}
   </React.StrictMode>,
 )
