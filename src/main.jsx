@@ -13,7 +13,7 @@ import Shope from './pages/shope.jsx'
 
 import FoodDetail from './pages/FoodDetail.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <>
     {/* <Home/> */}
     {/* <Menu/> */}
     {/* <Loading/> */}
@@ -24,5 +24,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <Shope/> */}
 
     {<FoodDetail/>}
-  </React.StrictMode>,
+  </>
 )
