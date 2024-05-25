@@ -1,5 +1,5 @@
 import { useRef ,useEffect, useState} from "react";
-import "../../css/signUp/signup.css"
+import style from "../../css/signUp/signup.module.css"
 
 const Canlendar =()=>{
     let year =  null;
@@ -40,42 +40,43 @@ const Canlendar =()=>{
     
     
         
-     <div class="calendar">
+     <div class={style.canlendar}>
     
-    <span>
-      <label htmlFor="month">ماه</label>
-      <select id="month"  name="month" onClick={(e)=> setMonth(e.target.value)}>
-        <option value={1} selected>فروردین</option>
-        <option value={2}>اردیبهشت</option>
-        <option value={3}>خرداد</option>
-        <option value={4}>تیر</option>
-        <option value={5}>مرداد</option>
-        <option value={6}>شهریور</option>
-        <option value={7}>مهر</option>
-        <option value={8}>آبان</option>
-        <option value={9}>آذر</option>
-        <option value={10}>دی</option>
-        <option value={11}>بهمن</option>
-        <option value={12}>اسفند</option>
+    <span  className={style.span}>
+      <label htmlFor="month" className={style.label}>ماه</label>
+      <select id="month"  className={style.select} name="month" onClick={(e)=> setMonth(e.target.value)}>
+        <option className={style.month} value={1} selected>فروردین</option>
+        <option className={style.month} value={2}>اردیبهشت</option>
+        <option className={style.month} value={3}>خرداد</option>
+        <option className={style.month} value={4}>تیر</option>
+        <option className={style.month} value={5}>مرداد</option>
+        <option className={style.month} value={6}>شهریور</option>
+        <option className={style.month} value={7}>مهر</option>
+        <option className={style.month} value={8}>آبان</option>
+        <option className={style.month} value={9}>آذر</option>
+        <option className={style.month} value={10}>دی</option>
+        
+        <option className={style.month} value={11}>بهمن</option>
+        <option className={style.month} value={12}>اسفند</option>
       </select>
     </span>
-    <span>
-      <label htmlFor="day">روز</label>
-      <select id="day" name="day">
+    <span className={style.span}>
+      <label htmlFor="day" className={style.label}>روز</label>
+      <select id="day" className={style.select} name="day">
   
   {Array.from({ length: month<=6 ? 31:30 }, (_,i) => {
     if (i+1==1)
-      return (<option key={i} value={i + 1} selected>{i + 1}</option>) 
+      return (<option key={i} className="day" value={i + 1} selected>{i + 1}</option>) 
     return (<option key={i} value={i + 1}>{i + 1}</option>)
   })
 
     }
-</select>
+</select >
 
     </span>
-    <span>
-      <label htmlFor="year">سال</label>
-      <select id="year" name="year">
+    <span className={style.span}>
+      <label htmlFor="year" className={style.label}>سال</label>
+      <select id="year" className={style.select} name="year">
             {
                 years
             }

@@ -1,29 +1,29 @@
 import Nav from "../component/NavBar.jsx"
-import "../css/order/orderStyle.css"
+import style from "../css/order/orderStyle.module.css"
 const Order = ()=>{
 
     return <>
         <Nav/>
         
-        <div className="order-detail">
-            <table>
+        <div className={style.div}>
+            <table className={style.table}>
 
                 <tr>
-                    <th>اقلام</th>
-                    <th>قیمت</th>
+                    <th className={style.th}>اقلام</th>
+                    <th className={style.th}>قیمت</th>
                     
                 </tr>
 
                 <tr>
 
-                    <td>item</td>
-                    <td>120000000000</td>
+                    <td className={style.td}>item</td>
+                    <td className={style.td}>120000000000</td>
                     
                 </tr>
 
             </table>
 
-            <div className="conclusion">
+            <div className={style.conclusion}>
             <p >قمیت کل :</p>
             <p>تاریخ: </p>
             <p>سریال سفارش:</p>

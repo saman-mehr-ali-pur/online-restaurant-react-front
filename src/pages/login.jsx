@@ -1,4 +1,4 @@
-import "../css/login/loginStyle.css"
+import sytle from "../css/login/loginStyle.module.css"
 import { useState ,useRef,useEffect} from "react";
 
 
@@ -31,18 +31,18 @@ const Login = ()=>{
     }
 
     return <>
-        <div className="ctn">
-        <h1>ورود</h1>
-        <form onSubmit={sendForm}>
+        <div className={sytle.ctn}>
+        <h1 className={sytle.h1}>ورود</h1>
+        <form onSubmit={sendForm} className={sytle.form}>
 
-            <label htmlFor="username">نام کاربری:</label>
-            <input type="text" id="username" name="username"  /> <br/>
+            <label htmlFor="username" className={sytle.label}>نام کاربری:</label>
+            <input type="text" id="username" name="username"  className={sytle.input}/> <br/>
 
 
-            <label htmlFor="password">کلمه عبور:</label>
-            <input type="password" id="password" name="password" ref={passInput}/>
-            <div className="checkbox-c"><input type="checkbox" onClick={toggleVisibility}/><p>نشان دادن پسورد</p></div>
-            <button type="submit" className="submit-btn" ref={btn}>ورود</button>
+            <label htmlFor="password" className={sytle.label}>کلمه عبور:</label>
+            <input type="password" id="password" name="password" className={sytle.input} ref={passInput}/>
+            <div className={sytle.checkboxC}><input type="checkbox" className={sytle.checkboxC_input} onClick={toggleVisibility}/><p className={sytle.checkboxC_p}>نشان دادن پسورد</p></div>
+            <button type="submit" className={sytle.submit} ref={btn}>ورود</button>
 
 
 

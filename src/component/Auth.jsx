@@ -1,4 +1,4 @@
-import "../css/auth/authStyle.css"
+import style from  "../css/auth/authStyle.module.css"
 import profileimg from "../assets/profile_3135715.png"
 const Auth = (props)=>{
 
@@ -8,7 +8,7 @@ const Auth = (props)=>{
     if(props.user==null)
         return <>
         
-            <div className="auth">
+            <div className={style.auth}>
                 <p>ورود/ثبت نام</p>
             </div>
         </>
@@ -16,7 +16,7 @@ const Auth = (props)=>{
 
     else
     return<>
-    <div className="auth">
+    <div className={style.auth}>
        <p>{props.user.username}</p>
         <img className="profile" src={profileimg} alt="profile" />
         

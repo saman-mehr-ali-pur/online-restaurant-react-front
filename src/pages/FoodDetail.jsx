@@ -1,6 +1,6 @@
 import Navbar from "../component/NavBar";
 import foodImg from "../assets/foodicon.svg"
-import "../css/foodDetail/foodStyle.css"
+import style from  "../css/foodDetail/foodStyle.module.css"
 import Comment from "../component/Comment";
 import like from "../assets/likeed.svg"
 import shpIcon from "../assets/shope.svg"
@@ -81,17 +81,17 @@ const FoodDetail = ()=>{
     return<>
         <Navbar/>
 
-        <div className="ctn-1">
-            <div className="header">
+        <div className={style.ctn_1}>
+            <div className={style.header}>
                 <div style={{"opacity": liked ? 1:0.5}} onClick={()=> {setLiked(!liked)}}><img src={like} alt="" /></div>
                 <div style={{"opacity": chosen ? 1:0.5}} onClick={()=>{setChosen(!chosen)}}><img src={shpIcon} alt=""></img></div>
 
             </div>
-            <div className="ctn-2">
-                <div className="img-ctn">
+            <div className={style.ctn_2}>
+                <div className={style.ctn_img}>
                         <img src={foodImg} alt="food" />
                 </div>
-                <div className="food-info">
+                <div className={style.food_info}>
                     <p>عنوان:{data.title}</p>
                     <p>قیمت:{data.price}</p>
                     <p></p>
@@ -99,13 +99,13 @@ const FoodDetail = ()=>{
                 </div>
 
             </div>
-            <h1 className="comment-h">نظرات:</h1>
-            <div className="input-ctn">
-                <div className="send-ctn" onClick={()=> setTest(test+1)}><p>send</p></div>
-                <input type="text" onKeyDown={(e)=> {handelKeyDown(e)}} name="comment" id="input-comment" placeholder="نوشتن نظر" />
+            <h1 className={style.comment_h}>نظرات:</h1>
+            <div className={style.input_ctn}>
+                <div className={style.send_ctn} onClick={()=> setTest(test+1)}><p>send</p></div>
+                <input type="text" onKeyDown={(e)=> {handelKeyDown(e)}} name="comment" className={style.input_comment} placeholder="نوشتن نظر" />
                 
                 </div>
-            <div className="comments">
+            <div className={style.comments}>
 
 
             {Comments.map(c =>{return <Comment username={c.username} comment={c.comment}/>})}

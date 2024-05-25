@@ -1,10 +1,10 @@
-import "../css/comment/commentStyle.css"
+import  style from "../css/comment/commentStyle.module.css"
 const Comment = ({username,comment})=>{
 
 
     return <>
-            <div className="comment">
-                <p><span className="username">{username}</span> :{comment}</p>
+            <div className={style.comment}>
+                <p><span className={style.username}>{username}</span> :{comment}</p>
             </div>
     </>
 }

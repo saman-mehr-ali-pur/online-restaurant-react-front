@@ -1,5 +1,5 @@
 import Navbar from "../component/NavBar";
-import "../css/shope/shopeStyle.css"
+import style from "../css/shope/shopeStyle.module.css"
 import ShpItem from "../component/shopeItem/shpItem.jsx";
 import { useEffect, useRef, useState } from "react";
 import creditIcon from "../assets/valid.svg"
@@ -46,7 +46,7 @@ const Shope = ()=>{
     return<>
         <Navbar/>
 
-        <div className="options">
+        <div className={style.options}>
                     <div>
 
                          <p >پرداخت</p>
@@ -56,7 +56,7 @@ const Shope = ()=>{
                       
                 <div><p>حذف سبد</p></div>
             </div>
-            <div className="item-container" ref={refEle}>
+            <div className={style.item_container} ref={refEle}>
                 
                 {
                     data.map((item,index)=> <><ShpItem key={index+1} id={item.id} name={item.name} price={index+1} state={item.state} trashEvent={deleteData}/></>)

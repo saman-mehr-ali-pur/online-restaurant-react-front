@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 import Navbar from "../component/NavBar"
-import "../css/menu/menuStyle.css"
+import style from "../css/menu/menuStyle.module.css"
 import foodicon from "../assets/foodicon.svg"
 import Loading from "./Loading"
 const Menu = () => {
@@ -15,21 +15,21 @@ const Menu = () => {
     if(!isLoading){
         return <>
         <Navbar/>
-        <div className="search-c">
+        <div className={style.search_c}>
             <input type="text"  placeholder="جستجو غذا یا نوشیدنی..."/>
         </div>
-        <div id="ctn" className="container" >
-            <div className="right-side">
-                {data.map((item,index) => {return <div key={index} className="item-c">
-                    <div className="pic-c"><img src={foodicon} alt="food" /></div>
-                    <div className="des-c"><p>item</p></div>
+        <div id="ctn" className={style.container} >
+            <div className={style.right_side}>
+                {data.map((item,index) => {return <div key={index} className={style.item_c}>
+                    <div className={style.pic_c}><img src={foodicon} alt="food" /></div>
+                    <div className={style.des_c}><p>item</p></div>
                 </div>})}
             </div>
-            <div className="left-side">
-                <div className="item"><p>غذا ها</p></div>
-                <div className="item"><p>نوشیدنی ها</p></div>
-                <div className="item"><p>دسر ها</p></div>
-                <div className="item"><p>سالاد ها</p></div>
+            <div className={style.left_side}>
+                <div className={style.item}><p>غذا ها</p></div>
+                <div className={style.item}><p>نوشیدنی ها</p></div>
+                <div className={style.item}><p>دسر ها</p></div>
+                <div className={style.item}><p>سالاد ها</p></div>
             </div>
         </div>
         

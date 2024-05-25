@@ -1,5 +1,5 @@
 
-import "../css/login/loginStyle.css"
+import sytle from "../css/login/loginStyle.module.css"
 import Canlendar from "../component/calendar/Calendar";
 import { useEffect, useState } from "react";
 const Signup = ()=>{
@@ -13,37 +13,37 @@ const Signup = ()=>{
 
             console.log(e.target[i].name)
        }
-
+       
       
 
     
     }
 
     return <>
-            <h1>ثبت نام</h1>
+            <h1 className={sytle.h1}>ثبت نام</h1>
 
-            <form onSubmit={doSubmit} >
-                <label htmlFor="fname" >نام</label>
-                <input type="text" id="fname" name="fname" required/>
+            <form onSubmit={doSubmit} className={sytle.form} >
+                <label htmlFor="fname" className={sytle.label}>نام</label>
+                <input className={sytle.input} type="text" id="fname" name="fname" required/>
 
-                <label htmlFor="lname">نام خانوادگی</label>
-                <input type="text" id="lname" name="lname" />
+                <label htmlFor="lname" className={sytle.label}>نام خانوادگی</label>
+                <input className={sytle.input} type="text" id="lname" name="lname" />
 
 
-                <label htmlFor="username">نام کاربری</label>
-                <input type="text" id="username" name="username" />
+                <label htmlFor="username" className={sytle.label}>نام کاربری</label>
+                <input className={sytle.input} type="text" id="username" name="username" />
 
-                <label htmlFor="email">ایمیل</label>
-                <input type="text" id="email" name="email"/> 
-                <label htmlFor="password">رمز ورود</label>
-                <input type="password" id="password" name="password" />
-                <label htmlFor="confirmPass">تکرار رمز ورود</label>
-                <input type="password" id="confirmPass" name="confirmPass" />
+                <label htmlFor="email" className={sytle.label}>ایمیل</label>
+                <input className={sytle.input} type="text" id="email" name="email"/> 
+                <label htmlFor="password" className={sytle.label}>رمز ورود</label>
+                <input className={sytle.input} type="password" id="password" name="password" />
+                <label htmlFor="confirmPass" className={sytle.label}>تکرار رمز ورود</label>
+                <input className={sytle.input} type="password" id="confirmPass" name="confirmPass" />
                 
-                <label htmlFor="birthDate">زاد روز</label>
+                <label htmlFor="birthDate" className={sytle.label}>زاد روز</label>
 
                 <Canlendar/>
-               <button type="submit" disabled={disable}>ثبت اطلاعات</button>
+               <button type="submit" className={sytle.submit}  disabled={disable}>ثبت اطلاعات</button>
             </form>
         </> 
         

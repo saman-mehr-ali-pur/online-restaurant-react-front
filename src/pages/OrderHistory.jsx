@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import Nav from "../component/NavBar.jsx"
 import Tool from "../component/Tool/FilterTool.jsx"
-import "../css/history/historyStyle.css"
+import sytle from  "../css/history/historyStyle.module.css"
 const OrderHistory = ()=>{
     
     const [list , setList ] = useState([])
@@ -47,10 +47,10 @@ const OrderHistory = ()=>{
             <Nav/>
             <Tool refrence={seachToolRef}/>
 
-            <div className="ok-btn"><button onClick={doSearch}>پردازش</button></div>
+            <div className={sytle.ok_btn}><button onClick={doSearch}>پردازش</button></div>
 
-            <div className="result-c">
-                {list}
+            <div className={sytle.result_c}>
+                {/* {list} */}
             </div>
     
     </>

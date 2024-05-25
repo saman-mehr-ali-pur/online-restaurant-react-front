@@ -1,5 +1,5 @@
 import imgFood  from "../../assets/foodicon.svg"
-import "../../css/shope/shopeItem.css"
+import style from "../../css/shope/shopeItem.module.css"
 import trash from "../../assets/trash.svg"
 import { useRef } from "react"
 const ShpItem = ({id,name , price,state,trashEvent})=>{
@@ -8,14 +8,14 @@ const ShpItem = ({id,name , price,state,trashEvent})=>{
 
     return <>
 
-        <div className="item">
+        <div className={style.item}>
 
-            <div className="trash-icn" onClick={()=> trashEvent(id)}>
-                <img src={trash} alt="" />
+            <div className={style.trash_icn} onClick={()=> trashEvent(id)}>
+                <img src={trash}  alt="" />
             </div>            
         
-            <img src={imgFood} alt="" />
-            <div className="description" >
+            <img src={imgFood} className={style.img} alt="" />
+            <div className={style.description} >
                 <p>{name}</p>
                 <p>{price}</p>
                 <p>{state==0 ? "تمام شده":"موجود"}</p>
