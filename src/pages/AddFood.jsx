@@ -4,7 +4,7 @@ const AddFood = ()=>{
 
 
     const postInfo = async (food,dataForm)=>{
-        let req = new Request("http://localhost:8080/food/save",{
+        let req = new Request("http://Ir.pourghorban.site:8080/food/save",{
             method:"post",
             headers:{
                 "content-type": "application/json"

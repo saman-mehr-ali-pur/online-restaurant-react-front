@@ -45,7 +45,7 @@ const Login = ()=>{
         
         let header = new Headers();
         header.append("Content-Type","application/json")
-        const req = new Request("http://localhost:8080/user/get",{
+        const req = new Request("http://Ir.pourghorban.site:8080/user/get",{
             method:"post",
             headers:header,
             body: JSON.stringify(user)

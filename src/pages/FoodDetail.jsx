@@ -20,7 +20,7 @@ const FoodDetail = ()=>{
 
     const loadData = async ()=>{
 
-        const req = new Request("http://localhost:8080/food/get/"+id,{
+        const req = new Request("http://Ir.pourghorban.site:8080/food/get/"+id,{
             method:"get",
             headers:{
                 "content-type":"application/json",
@@ -29,7 +29,7 @@ const FoodDetail = ()=>{
         })
 
 
-        const reqC = new Request("http://localhost:8080/comment/all/"+id+`?limit=${limit}`,{
+        const reqC = new Request("http://Ir.pourghorban.site:8080/comment/all/"+id+`?limit=${limit}`,{
             method:"get",
             headers:{
                 "content-type":"application/json",
@@ -124,7 +124,7 @@ const FoodDetail = ()=>{
             food: {id},
             comment:newComment.current.value
         }
-        const req = new Request("http://localhost:8080/comment/save",{
+        const req = new Request("http://Ir.pourghorban.site:8080/comment/save",{
 
             method:"post",
             headers:{
@@ -152,7 +152,7 @@ const FoodDetail = ()=>{
         })
         console.log(order)
         localStorage.setItem("orderId",order.id.toString())
-        await fetch(`http://localhost:8080/order/add/${id}/${order.id}/${inputNum.current.value}`,
+        await fetch(`http://Ir.pourghorban.site:8080/order/add/${id}/${order.id}/${inputNum.current.value}`,
     {
         method:"get",
         headers:{"content-type":"application/json"}
@@ -188,7 +188,7 @@ const FoodDetail = ()=>{
         }
         else{
 
-        fetch(`http://localhost:8080/order/add/${id}/${localStorage.getItem("orderId")}/${inputNum.current.value}`,
+        fetch(`http://Ir.pourghorban.site:8080/order/add/${id}/${localStorage.getItem("orderId")}/${inputNum.current.value}`,
     {
         method:"get",
         headers:{"content-type":"application/json"}
@@ -221,7 +221,7 @@ const FoodDetail = ()=>{
             </div>
             <div className={style.ctn_2}>
                 <div className={style.ctn_img}>
-                        <img src={data.images == null ? foodImg:`http://localhost:8080/image?path=${data.images[0]}`} alt="food" />
+                        <img src={data.images == null ? foodImg:`http://Ir.pourghorban.site:8080/image?path=${data.images[0]}`} alt="food" />
                 </div>
                 <div className={style.food_info}>
                     <p>عنوان:{data.name}</p>

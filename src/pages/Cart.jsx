@@ -32,7 +32,7 @@ const Cart = ()=>{
         if (id==null){
             return
         }
-        let req = new Request("http://localhost:8080/order/get/"+id,{
+        let req = new Request("http://Ir.pourghorban.site:8080/order/get/"+id,{
             method:"GET",
             headers:{
                 "Accept":"application/json"
@@ -47,7 +47,7 @@ const Cart = ()=>{
     const deleteItem = async (fId)=>{
 
         let orderId = localStorage.getItem("orderId")
-        const req  = new Request(`http://localhost:8080/order/item/${fId}/${localStorage.getItem("orderId")}`,{
+        const req  = new Request(`http://Ir.pourghorban.site:8080/order/item/${fId}/${localStorage.getItem("orderId")}`,{
             method:"DELETE"
         })
 

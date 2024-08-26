@@ -61,7 +61,7 @@ const Signup = ()=>{
        }
 
 
-       const req = new Request("http://localhost:8080/user/save",{method:"post",
+       const req = new Request("http://Ir.pourghorban.site:8080/user/save",{method:"post",
         headers:{"content-type":"application/json",
             "content-length": JSON.stringify(user).length.toString()
         },

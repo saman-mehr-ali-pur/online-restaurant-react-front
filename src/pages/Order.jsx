@@ -48,7 +48,7 @@ const Order = ()=>{
 
     useEffect(()=>{
         // console.log(`http://localhost:8080/order/get/${id}`)
-        let req = new Request(`http://localhost:8080/order/get/${id}`,{
+        let req = new Request(`http://Ir.pourghorban.site:8080/order/get/${id}`,{
             method:"get",
             headers:{
                 "Accept":"application/json"
@@ -119,7 +119,7 @@ const Order = ()=>{
 
 const pay = async (id)=>{
 
-    let result = await fetch(`http://localhost:8080/order/pay/${id}`).then(rs=>{
+    let result = await fetch(`http://Ir.pourghorban.site:8080/order/pay/${id}`).then(rs=>{
         if (!rs.ok)
             throw new Error("faild to pay")
 

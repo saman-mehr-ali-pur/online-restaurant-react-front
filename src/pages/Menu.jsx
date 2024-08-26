@@ -33,7 +33,7 @@ const Menu = () => {
 
     useEffect(()=>{
         
-        const req = new Request(`http://localhost:8080/food/all?limit=${limit}`,{
+        const req = new Request(`http://Ir.pourghorban.site:8080/food/all?limit=${limit}`,{
             method:"get",
             header:{
                 "Accept":"application/json"
@@ -60,7 +60,7 @@ const Menu = () => {
             <div className={style.right_side}>
                 {data.filter((item) =>  typ=="all" || item.type==typ)
                 .map((item,index) => {return <div key={index} className={style.item_c} onClick={()=>handleClickItem(item.id)}>
-                    <div className={style.pic_c}><img src={item.imagePath == null ? foodicon:"http://localhost:8080/image?path="+item.imagePath[0]} alt="food" /></div>
+                    <div className={style.pic_c}><img src={item.imagePath == null ? foodicon:"http://Ir.pourghorban.site:8080/image?path="+item.imagePath[0]} alt="food" /></div>
                     <div className={style.des_c}>
                         <p>{item.name}</p>
                         <p>{item.price}</p>

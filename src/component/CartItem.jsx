@@ -16,7 +16,7 @@ const CartItem = ({data,hadelDelete})=>{
 
 
         let orderId = localStorage.getItem("orderId")
-        const req  = new Request(`http://localhost:8080/order/add/${cart[0].id}/${localStorage.getItem("orderId")}/${num}`,{
+        const req  = new Request(`http://Ir.pourghorban.site:8080/order/add/${cart[0].id}/${localStorage.getItem("orderId")}/${num}`,{
             method:"get"
         })
 

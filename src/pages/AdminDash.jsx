@@ -39,7 +39,7 @@ const AdminDash = () =>{
 
         const deleteFood = async (id)=>{
 
-            const req = new Request(`http://localhost:8080/food/delete/${id}`,{
+            const req = new Request(`http://Ir.pourghorban.site:8080/food/delete/${id}`,{
                 method:"DELETE"
             })
 
@@ -75,7 +75,7 @@ const AdminDash = () =>{
             navigate("/")
             return
         }
-        const req = new Request("http://localhost:8080/food/all?limit="+1,{
+        const req = new Request("http://Ir.pourghorban.site:8080/food/all?limit="+1,{
             method:"get",
             headers:{
                 "Accept":"application/json"
@@ -93,7 +93,7 @@ const AdminDash = () =>{
 
     const removeItem = async (id)=>{
         
-        let result = await fetch(`http://localhost:8080/food/delete/${id}`,{method:"DELETE"}).
+        let result = await fetch(`http://Ir.pourghorban.site:8080/food/delete/${id}`,{method:"DELETE"}).
         then(rs =>{
             if(!rs.ok)
                 throw new Error("faild to delete")

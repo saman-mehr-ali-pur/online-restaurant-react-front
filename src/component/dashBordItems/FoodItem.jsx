@@ -13,7 +13,7 @@ const FoodItem = ({data,id,title,price,description,trashEvent,imgSrc}) => {
 
     const updateData = async ()=>{
 
-        const req = new Request("http://localhost:8080/food/update",{
+        const req = new Request("http://Ir.pourghorban.site:8080/food/update",{
             method:"POST",
             headers:{
                 "content-type":"application/json"
@@ -104,7 +104,7 @@ const FoodItem = ({data,id,title,price,description,trashEvent,imgSrc}) => {
         </div >
 
         <div className={style.imgContainer}>
-            <img src={imgSrc==null ? imgFood:`http://localhost:8080/image?path=${imgSrc}`}  />
+            <img src={imgSrc==null ? imgFood:`http://Ir.pourghorban.site:8080/image?path=${imgSrc}`}  />
         </div >
 
         <div className={style.rightSection}>

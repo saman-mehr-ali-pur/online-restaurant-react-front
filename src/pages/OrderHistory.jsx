@@ -75,7 +75,7 @@ const OrderHistory = ()=>{
         }
             
 
-        const req = new Request(`http://localhost:8080/order/all/user/${username}/${password}`,{
+        const req = new Request(`http://Ir.pourghorban.site:8080/order/all/user/${username}/${password}`,{
             method:"get",
             headers:{
                 "Accept":"application/json"

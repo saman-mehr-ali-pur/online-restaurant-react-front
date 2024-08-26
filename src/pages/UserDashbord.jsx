@@ -39,7 +39,7 @@ const UserDashbord = ()=>{
 
         let user = {username,password}
 
-        const req = new Request("http://localhost:8080/user/get",{
+        const req = new Request("http://Ir.pourghorban.site:8080/user/get",{
             method:"post",
             headers : {
                 "content-type":"application/json"
@@ -59,7 +59,7 @@ const UserDashbord = ()=>{
                 return
 
             setLock(!lock)
-            let req = new Request("http://localhost:8080/user/update",{
+            let req = new Request("http://Ir.pourghorban.site:8080/user/update",{
                 method:"PATCH",
                 headers:{
                     "content-type":"application/json"
@@ -105,7 +105,7 @@ const UserDashbord = ()=>{
 
         let addr = data.addresses
         setLock(!lock)
-        let req = new Request("http://localhost:8080/user/address",{
+        let req = new Request("http://Ir.pourghorban.site:8080/user/address",{
             method:"PATCH",
             headers:{
                 "content-type":"application/json"
@@ -147,7 +147,7 @@ const postAddress = async () =>{
     let addr = data.addresses
     console.log(addr)
     setLock(!lock)
-    let req = new Request("http://localhost:8080/user/address",{
+    let req = new Request("http://Ir.pourghorban.site:8080/user/address",{
         method:"post",
         headers:{
             "content-type":"application/json"
