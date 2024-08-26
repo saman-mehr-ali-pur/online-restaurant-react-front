@@ -11,10 +11,14 @@ import Canlendar from './component/calendar/Calendar.jsx'
 import Order from "./pages/Order.jsx"
 import OrderHistory from './pages/OrderHistory.jsx'
 import Shope from './pages/shope.jsx'
-// import FilterTool from "./component/Tool/FilterTool.jsx"
 import FoodDetail from './pages/FoodDetail.jsx'
+import UserDashbord from './pages/UserDashbord.jsx'
+import Cart from "./pages/Cart.jsx"
+import AdminDash from './pages/AdminDash.jsx'
+import AddFood from './pages/AddFood.jsx'
 
-// import UserDashbord from './pages/UserDashbord.jsx'
+import { BrowserRouter ,Routes,Route } from 'react-router-dom'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <>
     {/* <Home/> */}
@@ -33,6 +37,32 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
     {/* <UserDashbord/> */}
 
+    {/* <Cart/> */}
 
+
+  {/* <AdminDash/> */}
+
+  {/* <AddFood/> */}
+
+
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/login" element={<Login/>}/>
+      <Route path="/signup" element={<SignUp/>}/>
+      <Route path='/menu' element={<Menu />} />
+      <Route path="/menu/food/:id" element={<FoodDetail/>} />
+      <Route  path='/orderhistory' element={<OrderHistory/>}/> 
+       <Route path='/orderhistory/order/:id' element={<Order/>}/>
+       {/* <Route path='/food' element={<FoodDetail/>}/> */}
+       <Route path='/user-dash' element={<UserDashbord/>}/>
+      <Route path='/cart' element={< Cart />}/>
+      <Route path='/admin-dash' element={<AdminDash/>}/>
+      <Route path='/admin-dash/add-food' element={<AddFood/>}/>
+      <Route path='/orde' />
+     
+  </Routes>
+
+  </BrowserRouter>
   </>
 )

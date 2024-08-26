@@ -1,0 +1,57 @@
+
+.container{
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border-bottom: solid ; */
+    border-color: rgb(161, 161, 161);
+    border-width: 1px;
+    /* border: solid; */
+    
+
+    
+}
+
+.container div{
+    /* border: solid; */
+    
+    
+}
+
+
+.trash{
+    align-self: flex-start;
+    width: 3%;
+}
+
+
+.trash:hover{
+    cursor: pointer;
+}
+.trash img{
+    width: 100%;
+}
+
+
+.foodimg{
+        width: 15%;
+        align-self: center;
+        /* border-right: solid; */
+        border-color: rgb(206, 206, 206);
+        border-right-width: 2px;
+}
+
+.foodimg img{
+    width: 100%;
+}
+
+.info{
+
+    direction: rtl;
+}
+
+
+.info input{
+    width: 30%;
+}

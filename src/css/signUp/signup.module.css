@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+@font-face {
+    font-family: samim;
+    src: url("../fonts/Samim.woff");
+}
+
+.span{
+    display: block;
+    margin-bottom: 2%;
+    margin-top: 2% ;
+    
+}
+
+
+.select{
+    font-size: 15px;
+}
+
+.label{
+    /* display: block; */
+    direction: rtl;
+    margin-right:1%;
+    width: 20%;
+    /* border: solid; */
+}
+.button{
+
+    border: solid;
+    border-radius: 20px;
+    border-color: rgba(181, 181, 181, 0.5);
+    /* background-color: rgb(195, 195, 195); */
+    width: 50%;
+    height: 20%;
+    font-size: 18px;
+    margin-left: 25%;
+    margin-top: 10%;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+
+.select{
+    border-color: rgb(181, 181, 181);
+    border-radius: 20px;
+    border-width: 2px;
+    text-align: center;
+    font-family: "Open Sans",sans-serif;
+    font-weight: 500;
+
+}
+.month{
+    /* border: non */
+    /* border-color: rgb(149, 149, 149); */
+    font-family: "samim";
+    direction: rtl;
+    
+}
+
+.calender{
+
+}

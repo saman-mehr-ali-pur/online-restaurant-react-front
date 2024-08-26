@@ -1,0 +1,93 @@
+
+@font-face {
+    font-family: samim;
+    src: url("../fonts/Samim.woff");
+}
+
+
+.container{
+    /* border: solid; */
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(234, 234, 234);
+    border-radius: 20px;
+    padding: 1%;
+
+}
+
+.trashContainer{
+    width: 8%;
+    opacity: 0.7;
+    transition: opacity 0.1s;
+    align-self: flex-start;
+    padding: 0.1%;
+
+}
+
+
+.trashContainer:hover{
+    opacity: 0.5;
+}
+.trashContainer img {
+
+    width: 100%;
+    
+}
+
+.imgContainer{
+    /* border: solid; */
+    border-radius: 20px;
+    width: 40%;
+    height: 90%;
+
+}
+
+.imgContainer img{
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.rightSection{
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    margin-left: 2%;
+    width: 48%;
+    height: 90%;
+    /* background-color: rgb(228, 228, 228); */
+}
+
+
+.rightSection p {
+
+    
+    font-family: "samim";
+    font-size: 17px;
+    width: 90%;
+    /* border: solid;
+     */
+     background-color: rgb(212, 212, 212);
+     border-radius: 20px;
+     padding-right: 2%;
+}
+
+.title{
+
+
+}
+
+.price{
+
+}
+
+
+.desc{
+
+
+
+}

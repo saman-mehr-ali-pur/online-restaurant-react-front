@@ -16,8 +16,15 @@ import food2 from "../assets/food2.jpg"
 import delivryimg from "../assets/delivry.svg"
 import slideStyle from  "../css/silde/sildeStyle.module.css"
 import Navbar  from "../component/NavBar";
+import { useNavigate } from "react-router-dom";
 const Home = ()=>{
 
+  const naviagte = useNavigate()
+
+  let username = document.cookie.split("; ").find(s => s.startsWith("username="))
+  if(username==null){
+    naviagte("/login")
+  }
     
 
     return <>

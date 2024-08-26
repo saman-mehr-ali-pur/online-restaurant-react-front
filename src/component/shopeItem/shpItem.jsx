@@ -2,9 +2,8 @@ import imgFood  from "../../assets/foodicon.svg"
 import style from "../../css/shope/shopeItem.module.css"
 import trash from "../../assets/trash.svg"
 import { useRef } from "react"
-const ShpItem = ({id,name , price,state,trashEvent})=>{
+const ShpItem = ({id,name,price,state,trashEvent})=>{
 
-    
 
     return <>
 
@@ -12,7 +11,7 @@ const ShpItem = ({id,name , price,state,trashEvent})=>{
 
             <div className={style.trash_icn} onClick={()=> trashEvent(id)}>
                 <img src={trash}  alt="" />
-            </div>            
+            </div>
         
             <img src={imgFood} className={style.img} alt="" />
             <div className={style.description} >

@@ -10,8 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-pdf/renderer": "^3.4.4",
+    "jalaali-js": "^1.2.7",
+    "jalali-date": "^1.1.5",
+    "jalali-moment": "^3.3.11",
+    "jspdf-html2canvas": "^1.5.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.26.1",
+    "react-to-print": "^2.15.1",
+    "shamsi-date-converter": "^1.0.5",
     "swiper": "^11.1.1"
   },
   "devDependencies": {

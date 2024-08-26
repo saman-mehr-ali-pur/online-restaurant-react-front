@@ -1,5 +1,7 @@
+import { json, Navigate, redirect, replace, useNavigate } from "react-router-dom";
 import sytle from "../css/login/loginStyle.module.css"
 import { useState ,useRef,useEffect} from "react";
+// import { Redirect } from "react-router-dom";
 
 
 const Login = ()=>{
@@ -8,17 +10,50 @@ const Login = ()=>{
     const [isReceive,setIsReceive] = useState(false);
     const btn = useRef();
     const passInput = useRef()
+    const navigate = useNavigate();
 
-    async function test(){
-        console.log("run function")
+    async function getData(requst){
+        
+        const user = await fetch(requst).then(rs => {
+        //    console.log("fetch user")
+            if (!rs.ok)
+                throw new Error("not found user")
+            return rs.json();
+        }).then(user=>{
+            // console.log(user.password)
+            document.cookie = "username="+user.username;
+            document.cookie = "password="+user.password;
+            document.cookie = "role="+user.role;
+            navigate("/")
+        })
+        .catch(e =>{
+            console.log(e)
+            navigate("/login")
+        })
+    
+
+        
+        
     }
-    
-    
+
+
     const sendForm = (e)=>{
         e.preventDefault();
-        btn.current.disabled = true;
+        let user = {username:e.target.username.value,
+            password:e.target.password.value
+        }
         
-        setTimeout(()=>{btn.current.disabled=false},3000);
+        let header = new Headers();
+        header.append("Content-Type","application/json")
+        const req = new Request("http://localhost:8080/user/get",{
+            method:"post",
+            headers:header,
+            body: JSON.stringify(user)
+        }) 
+
+        getData(req)
+       
+       
     }
 
     const toggleVisibility = () =>{
@@ -53,6 +88,8 @@ const Login = ()=>{
 
 
 }
+
+
 
 
 export default Login;

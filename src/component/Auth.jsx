@@ -1,26 +1,33 @@
 import style from  "../css/auth/authStyle.module.css"
 import profileimg from "../assets/profile_3135715.png"
-const Auth = (props)=>{
+import { Link } from "react-router-dom"
+const Auth = ()=>{
 
 
-   
-    // console.log(props.user.username);
-    if(props.user==null)
+    let username =  document.cookie.split("; ").find(c => c.startsWith("username="))
+    // console.log(username)
+    if (username!=undefined)
+        username = username.split("=")[1]
+    if(username==undefined)
         return <>
-        
-            <div className={style.auth}>
+            <Link to="/login" className={style.auth}>
+            <div >
                 <p>ورود/ثبت نام</p>
             </div>
+            </Link>
+            
         </>
 
 
     else
     return<>
+    <Link to="/user-dash">
     <div className={style.auth}>
-       <p>{props.user.username}</p>
+       <p>{username}</p>
         <img className="profile" src={profileimg} alt="profile" />
         
-    </div>
+    </div></Link>
+    
 </>
 }
 
