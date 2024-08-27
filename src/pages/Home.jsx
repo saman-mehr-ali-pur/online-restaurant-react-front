@@ -17,15 +17,21 @@ import delivryimg from "../assets/delivry.svg"
 import slideStyle from  "../css/silde/sildeStyle.module.css"
 import Navbar  from "../component/NavBar";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 const Home = ()=>{
 
   const naviagte = useNavigate()
 
-  let username = document.cookie.split("; ").find(s => s.startsWith("username="))
-  if(username==null){
-    naviagte("/login")
-  }
-    
+  
+  
+    useEffect(()=>{
+
+      let username = document.cookie.split("; ").find(s => s.startsWith("username="))
+       if(username==null){
+        console.log("***")
+        naviagte("/login")
+    // return
+      }})
 
     return <>
     

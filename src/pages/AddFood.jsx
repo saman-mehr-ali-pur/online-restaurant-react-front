@@ -14,21 +14,21 @@ const AddFood = ()=>{
         })
 
 
-        // let result = await fetch(req).then(
-        //     rs =>{
-        //         if(!rs.ok)
-        //             throw new Error("faild to up load info")
+        let result = await fetch(req).then(
+            rs =>{
+                if(!rs.ok)
+                    throw new Error("faild to up load info")
 
-        //         return [rs.json(),rs.status]
-        //     }
-        // ).catch(e => {
-        //     alert("faild to save info")
-        //     console.error(e)}
-        // )
+                return [rs.json(),rs.status]
+            }
+        ).catch(e => {
+            alert("faild to save info")
+            console.error(e)}
+        )
 
 
         if(true){
-            result = await fetch("http://localhost:8080/food/img/"+3,{
+            result = await fetch("http://Ir.pourghorban.site:8080/food/img/"+3,{
                 method:"post",
                 body:dataForm
             }).then(
@@ -37,7 +37,9 @@ const AddFood = ()=>{
                         throw new Error()
                     return ts.text()
                 }
-            ).catch(e => console.error(e))
+            ).catch(e =>{ 
+                alert("faild to upload file")
+                console.error(e)})
         }
 
     }

@@ -6,7 +6,7 @@ import like from "../assets/likeed.svg"
 import shpIcon from "../assets/shope.svg"
 import { useEffect, useRef, useState } from "react";
 import Loading from "./Loading.jsx"
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 const FoodDetail = ()=>{
     const [liked,setLiked] = useState(true)
     const [chosen,setChosen] = useState(true)
@@ -17,6 +17,7 @@ const FoodDetail = ()=>{
     const [limit,setLimit] = useState(1)
     const newComment = useRef()
     const inputNum = useRef();
+    const navigate = useNavigate()
 
     const loadData = async ()=>{
 
@@ -124,6 +125,12 @@ const FoodDetail = ()=>{
             food: {id},
             comment:newComment.current.value
         }
+
+        if (username==null || username==undefined){
+            alert("not authenticated")
+            Navigate("/login")
+            return
+        }
         const req = new Request("http://Ir.pourghorban.site:8080/comment/save",{
 
             method:"post",
@@ -178,7 +185,7 @@ const FoodDetail = ()=>{
         if (orderId==null){
             const newOrder = {customer:{username:getUsername(),password:getPassWord()}}
             console.log(newOrder)
-            const req = new Request("http://localhost:8080/order",{
+            const req = new Request("http://Ir.pourghorban.site:8080/order",{
                 method:"post",
                 headers:{"content-type":"application/json"},
                 body: JSON.stringify(newOrder)

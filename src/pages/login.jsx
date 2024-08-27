@@ -1,6 +1,7 @@
 import { json, Navigate, redirect, replace, useNavigate } from "react-router-dom";
 import sytle from "../css/login/loginStyle.module.css"
 import { useState ,useRef,useEffect} from "react";
+import { Link } from "react-router-dom";
 // import { Redirect } from "react-router-dom";
 
 
@@ -83,6 +84,7 @@ const Login = ()=>{
 
 
         </form>
+        <Link to="/signup">< p className={sytle.p}>ایجاد حساب</p></Link>
         </div>
     </>
 
