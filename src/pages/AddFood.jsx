@@ -19,7 +19,7 @@ const AddFood = ()=>{
                 if(!rs.ok)
                     throw new Error("faild to up load info")
 
-                return [rs.json(),rs.status]
+                return rs.json()
             }
         ).catch(e => {
             alert("faild to save info")
@@ -27,8 +27,8 @@ const AddFood = ()=>{
         )   
 
 
-        if(result[1]==200){
-            result = await fetch("http://Ir.pourghorban.site:8080/food/img/"+result[0].id,{
+        if(result!=undefined || result!=null){
+            result = await fetch("http://Ir.pourghorban.site:8080/food/img/"+result.id,{
                 method:"post",
                 body:dataForm
             }).then(
