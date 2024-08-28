@@ -24,11 +24,11 @@ const AddFood = ()=>{
         ).catch(e => {
             alert("faild to save info")
             console.error(e)}
-        )
+        )   
 
 
-        if(true){
-            result = await fetch("http://Ir.pourghorban.site:8080/food/img/"+3,{
+        if(result[1]==200){
+            result = await fetch("http://Ir.pourghorban.site:8080/food/img/"+result[0].id,{
                 method:"post",
                 body:dataForm
             }).then(
