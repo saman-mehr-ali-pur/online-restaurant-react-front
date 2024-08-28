@@ -1,7 +1,9 @@
 // ?import  "../css/addFood/style.css"
+import { useNavigate } from "react-router-dom"
 import style from "../css/addFood/formStyle.module.css"
 const AddFood = ()=>{
 
+    const navigate = useNavigate()
 
     const postInfo = async (food,dataForm)=>{
         let req = new Request("http://Ir.pourghorban.site:8080/food/save",{
@@ -35,12 +37,16 @@ const AddFood = ()=>{
                 rs =>{
                     if(!rs.ok)
                         throw new Error()
-                    return ts.text()
+                    return rs.text()
                 }
             ).catch(e =>{ 
                 alert("faild to upload file")
                 console.error(e)})
         }
+
+        if (result == "true")
+            navigate("/admin-dash")
+        
 
     }
 
